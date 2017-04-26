@@ -1,0 +1,11 @@
+// node modules
+node_modules/
+
+
+// generated from typescripts
+*.js
+*.js.map
+
+// vim files 
+*~
+*.swp
