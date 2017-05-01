@@ -1,0 +1,19 @@
+<article>   
+  <ul >
+    <li *ngFor="let room of activelyRentedRooms">
+        <p>Room {{room.id}}</p>
+        <img src="{{room.photoSrc}}" alt="">  
+        <div>
+            <p>Price: £ {{room.price}} </p>
+            <div>
+                <p>Tenant:  </p>
+                <ul>
+                  <li *ngFor="let occupant of room.occupants">
+                    <a href="" >{{occupant.firstName}} {{occupant.lastName}}</a>
+                  </li>
+                </ul>
+            </div>
+        </div>
+    </li>
+  </ul>
+</article>

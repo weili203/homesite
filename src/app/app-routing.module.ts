@@ -2,10 +2,12 @@ import {NgModule} from '@angular/core';
 import {Routes, RouterModule} from '@angular/router';
 
 import {PageNotFoundComponent} from './page-not-found.component'
+import { RentComponent } from './rent/rent.component'
 
 const routes : Routes = [
-    //{path:'', pathMatch:'full', redirectTo:'./mainContent'},
-    {path:'**', pathMatch:'full', component:PageNotFoundComponent}
+    { path: '', pathMatch: 'full', redirectTo: 'rent', },
+    { path: 'rent', component: RentComponent },    
+    { path:'**', pathMatch:'full', component:PageNotFoundComponent}
 ]; 
 
 @NgModule({
@@ -14,4 +16,6 @@ const routes : Routes = [
 })
 export class AppRoutingModule{ }
 
-export const routableComponent = [PageNotFoundComponent];
+export const routableComponents = [
+    PageNotFoundComponent
+    ];
