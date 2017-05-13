@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Room, RoomSize } from '../model/room';
-import { Tenant } from '../model/tenant';
+import { Tenant, Gender } from '../model/tenant';
 
 
 export interface IRentService{
@@ -25,13 +25,14 @@ export class RentService implements IRentService {
                 isEnSuite : false,
                 hasBalcony : false,
                 occupants : [{
-                    firstName : 'Lenka',
+                    firstName : 'firstname',
                     lastName : 'lastName',
                     dateOfBirth: new Date('1989-01-06T00:00:00'),
-                    movedInDate: new Date ('2015-01-06T00:00:00')
+                    movedInDate: new Date ('2015-01-06T00:00:00'),
+                    gender : Gender.female
                 }],
                 price: 598,
-                photoSrc : ''
+                photoSrc : '../img/room1.png'
             },
             {
                 id: 2,
@@ -44,10 +45,11 @@ export class RentService implements IRentService {
                     firstName : 'A X',
                     lastName : 'lastName',
                     dateOfBirth: new Date('1989-11-16T00:00:00'),
-                    movedInDate: new Date ('2017-02-16T00:00:00')
+                    movedInDate: new Date ('2017-02-16T00:00:00'),
+                    gender : Gender.male
                 }],
                 price: 830,
-                photoSrc : ''
+                photoSrc : '../../img/room2.png'
             },            
             {
                 id: 3,
@@ -57,13 +59,22 @@ export class RentService implements IRentService {
                 isEnSuite : false,
                 hasBalcony : true,
                 occupants : [{
-                    firstName : 'Vishal (Ricky)',
+                    firstName : 'Vishal ',
                     lastName : 'Sahota',
                     dateOfBirth: new Date('1989-11-16T00:00:00'),
-                    movedInDate: new Date ('2016-08-16T00:00:00')
-                }],
+                    movedInDate: new Date ('2016-08-16T00:00:00'),
+                    gender : Gender.male
+                },
+                {
+                    firstName : 'first name 1 ',
+                    lastName : 'last names',
+                    dateOfBirth: new Date('1989-11-16T00:00:00'),
+                    movedInDate: new Date ('2016-08-16T00:00:00'),
+                    gender : Gender.male
+                }
+                ],
                 price: 840,
-                photoSrc : ''
+                photoSrc : '../../img/room3.png'
             },            
             {
                 id: 4,
@@ -76,10 +87,11 @@ export class RentService implements IRentService {
                     firstName : 'Alex',
                     lastName : 'last name',
                     dateOfBirth: new Date('1989-11-16T00:00:00'),
-                    movedInDate: new Date ('2016-06-16T00:00:00')
+                    movedInDate: new Date ('2016-06-16T00:00:00'),
+                    gender : Gender.male
                 }],
                 price: 760,
-                photoSrc : ''
+                photoSrc : '../../img/room4.png'
             }  
         ];
     }

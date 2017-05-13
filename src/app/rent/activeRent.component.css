@@ -1,0 +1,39 @@
+p.femaleRoomCaption {
+    font-size:150%; font-weight:bold;
+    background-color: #D6323E;
+    color : snow
+
+}
+
+p.maleRoomCaption {
+    font-size:150%; font-weight:bold;
+    background-color: steelblue;
+    color : snow
+}
+
+p.mixGenderRoomCaption {
+    font-size:150%; font-weight:bold;
+    background-color: yellowgreen;
+    color : snow
+}
+
+
+/**** list ****/
+ul.horizontalList li {
+    display:inline;
+}
+
+ul.roomList {
+    list-style-type: none;
+}
+
+ul.roomList li {
+    margin-bottom: 15px;
+}
+
+/**** images ****/
+img.roomImage {
+    width: 20%; 
+    height: 50%;
+    border: 1px solid lightgray
+}

@@ -1,19 +1,25 @@
 <article>   
-  <ul >
+  <ul class="roomList">
     <li *ngFor="let room of activelyRentedRooms">
-        <p>Room {{room.id}}</p>
-        <img src="{{room.photoSrc}}" alt="">  
-        <div>
-            <p>Price: £ {{room.price}} </p>
-            <div>
-                <p>Tenant:  </p>
-                <ul>
+      <p [ngClass]="{'maleRoomCaption':1==1, 'femaleRoomCaption':1==0, 'mixGenderRoomCaption':1==2}" >Room {{room.id}}</p>
+      <div class="row">
+        <a (click)="clickedRoom(room)"><img class="col-md-8 roomImage" [src]="room.photoSrc" alt="{{room.name}} image" >  </a>
+        <div class="col-md-4">
+            <div class="row">  
+                <p class="col-md-2">Price: </p>            
+                <p class="col-md-10"> £{{room.price}} </p>
+            </div>
+            <div class="row">
+                <p class="col-md-2">Tenant:  </p>
+                <ul class="col-md-10 horizontalList">
                   <li *ngFor="let occupant of room.occupants">
                     <a href="" >{{occupant.firstName}} {{occupant.lastName}}</a>
                   </li>
                 </ul>
             </div>
         </div>
+      </div>
     </li>
   </ul>
+  <room-detail-modal [room]="selectedRoom"></room-detail-modal>
 </article>
