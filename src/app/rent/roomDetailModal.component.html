@@ -1,5 +1,5 @@
-<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
+<div bsModal #childModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel"  aria-hidden="true">
+  <div class="modal-dialog modal-lg">
     <div class="modal-content">
       <div class="modal-header">
         <h4 class="modal-title pull-left">{{room?.name}}</h4>
@@ -8,7 +8,27 @@
         </button>
       </div>
       <div class="modal-body">
-        I am a child modal, opened from parent component!
+        <img class="" [src]="room?.photoSrc" alt="{{room?.name}} image" >
+
+        <div class="row">
+          <p class="col-md-6">Size: </p> 
+          <p class="col-md-6">{{room?.size}} </p> 
+        </div>
+
+        <div class="row">
+          <p class="col-md-6">Ensuite: </p> 
+          <p class="col-md-6">{{room?.isEnSuite}} </p> 
+        </div>
+
+        <div class="row">
+          <p class="col-md-6">Balcony: </p> 
+          <p class="col-md-6">{{room?.hasBalcony}} </p> 
+        </div>
+
+        <div class="row">
+          <p class="col-md-6">Balcony: </p> 
+          <p class="col-md-6">{{room?.hasBalcony}} </p> 
+        </div>
       </div>
     </div>
   </div>

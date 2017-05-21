@@ -1,2 +1,22 @@
+<div>
+<header>
+<nav>
+    <ul>
+        <li>
+            <!--<active-rent>Loading Rent</active-rent>-->
+             <a [routerLink]="['/activerent']" routerLinkActive="active" class="btn btn-primary">Active Rent</a>
+        </li>
+    
+        <li>
+            <a [routerLink]="['/renthistory']" routerLinkActive="active" class="btn btn-primary">Rent History</a>
+        </li>
+    </ul>
+</nav>
+</header>
+</div>
 
-<active-rent>Loading Rent</active-rent>
+  <main>
+    <section>
+      <router-outlet></router-outlet>
+    </section>
+  </main>

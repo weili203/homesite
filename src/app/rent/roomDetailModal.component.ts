@@ -11,6 +11,10 @@ export class RoomDetailModalComponent{
     @Input() room : Room;
     @ViewChild('childModal') childModal : ModalDirective;
 
+    constructor(){
+        this.room = new Room();
+    }
+
     public Show() : void {
         this.childModal.show();
     }
